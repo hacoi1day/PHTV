@@ -3,99 +3,38 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![macOS 14+](https://img.shields.io/badge/macOS-14+-blue.svg)](https://www.apple.com/macos/)
 [![Swift 6.0+](https://img.shields.io/badge/Swift-6.0+-orange.svg)](https://swift.org)
-[![OpenKey](https://img.shields.io/badge/Engine-OpenKey-blueviolet.svg)](https://github.com/tuyenvm/OpenKey)
-[![Website](https://img.shields.io/badge/Website-phamhungtien.com/PHTV-green.svg)](https://phamhungtien.com/PHTV/)
 
-**PHTV** là bộ gõ tiếng Việt hoàn toàn offline cho macOS, được phát triển bởi **Phạm Hùng Tiến**. Dự án này sử dụng và mở rộng **[OpenKey](https://github.com/tuyenvm/OpenKey)** - công cụ nhập liệu tiếng Việt mạnh mẽ, với tích hợp hiện đại cho macOS và giao diện SwiftUI.
+Bộ gõ tiếng Việt offline hoàn toàn cho macOS, hoạt động nhanh, riêng tư, không cần Internet.
 
----
+## ⚡ Bắt đầu nhanh
 
-## 🧭 Mục lục nhanh
-
-- [Tải xuống](#-tải-xuống--hướng-dẫn)
-- [Tính năng](#-tính-năng-chính)
-- [Yêu cầu & Cài đặt](#-yêu-cầu-hệ-thống)
-- [Sử dụng](#-sử-dụng)
-- [Cấu trúc dự án](#-cấu-trúc-dự-án)
-- [Đóng góp & Hỗ trợ](#-đóng-góp)
-
----
-
-## 🎉 Mới trong v1.1.0 - Spotlight Fix
-
-> ✅ **Spotlight hoạt động bình thường!** Bạn giờ có thể gõ tiếng Việt trực tiếp trong Spotlight Search mà không bị garbling/lỗi.
-
-**Lỗi đã được khắc phục:**
-- ❌ Trước: "Phạm Hùng Tiến" → "Phaạm Huùng Tieiến" *(garbled)*
-- ✅ Giờ: "Phạm Hùng Tiến" → **"Phạm Hùng Tiến"** *(hoàn hảo!)*
-
-**Cách thực hiện:**
-- Sử dụng Accessibility API (AX text replacement) thay vì synthetic events phức tạp
-- Defer backspaces và áp dụng deterministically trong SendNewCharString()
-- Per-character Unicode posting để tránh mark reordering
-- HID tap posting + non-coalesced flags + delays cho timing-sensitive Spotlight field
-
----
-
-## ⚡ Bắt đầu nhanh (3 bước)
-
-1. Tải `PHTV.dmg` hoặc `PHTV.zip` từ [phamhungtien.com/PHTV](https://phamhungtien.com/PHTV/) hoặc [Releases](../../releases/latest) **(v1.1.0 hoặc mới hơn)**
+1. Tải từ [phamhungtien.com/PHTV](https://phamhungtien.com/PHTV/)
 2. Kéo `PHTV.app` vào `Applications`
-3. Mở app và cấp **Accessibility** khi được nhắc
+3. Cấp quyền **Accessibility** khi được nhắc
 
----
+## ✨ Tính năng
 
-## 🌐 Tải xuống & Hướng dẫn
+- **Hoàn toàn offline** - Không cần Internet
+- **Telex & VNI** - Hỗ trợ cả hai phương pháp gõ
+- **Dark Mode** - Giao diện hiện đại macOS 14+
+- **Spotlight Search** - Gõ tiếng Việt trong Spotlight không bị lỗi
+- **Macro/Gõ tắt** - Tùy chỉnh nhanh phím
+- **Riêng tư** - Không gửi dữ liệu ra ngoài
 
-> ### 👉 **[Tải PHTV từ phamhungtien.com/PHTV](https://phamhungtien.com/PHTV/)** - Hướng dẫn chi tiết, hình ảnh, và video
+## 📋 Yêu cầu
 
-<div align="center">
+- macOS 14 hoặc mới hơn
+- Cấp quyền Accessibility
 
-| **Tải ngay**                                               | **Hướng dẫn cài đặt**                               | **Tính năng**                                          | **Liên hệ**                                         |
-| ---------------------------------------------------------- | --------------------------------------------------- | ------------------------------------------------------ | --------------------------------------------------- |
-| [🔗 phamhungtien.com/PHTV](https://phamhungtien.com/PHTV/) | [📖 Chi tiết](https://phamhungtien.com/PHTV/#setup) | [✨ Xem thêm](https://phamhungtien.com/PHTV/#features) | [📧 Góp ý](https://phamhungtien.com/PHTV/#feedback) |
+## 📖 Tài liệu
 
-</div>
+- [Hướng dẫn chi tiết](https://phamhungtien.com/PHTV/#setup)
+- [Các tính năng](https://phamhungtien.com/PHTV/#features)
+- [Góp ý & Liên hệ](https://phamhungtien.com/PHTV/#feedback)
 
----
+## 📄 License
 
-## ✨ Đặc điểm nổi bật
-
-- ✅ **Hoạt động hoàn toàn offline** - Không cần kết nối Internet
-- 🚀 **Hiệu năng cao** - Tối ưu hóa cho macOS với giao diện SwiftUI hiện đại
-- 🎨 **Giao diện Liquid Glass** - Tương thích với macOS 14+ với thiết kế đẹp mắt
-- 🌙 **Dark Mode** - Tự động thích ứng với chế độ giao diện hệ thống
-- 🔧 **Hoàn toàn có thể tùy chỉnh** - Linh hoạt với nhiều tùy chọn cấu hình
-- 🔒 **Quyền riêng tư** - Không thu thập hay gửi dữ liệu gõ ra ngoài
-- 🔍 **Spotlight Search** - *(v1.1.0+)* Gõ tiếng Việt trực tiếp trong Spotlight mà không bị lỗi
-
-## 🌟 Tính năng chính
-
-### 📱 Phương pháp gõ
-
-- **Telex** - Phương pháp phổ biến nhất (ví dụ: `vieetj` → `việt`)
-- **VNI** - Phương pháp sử dụng số (ví dụ: `vie65t` → `việt`)
-- **Simple Telex 1 & 2** - Biến thể đơn giản của Telex
-
-### 🔤 Bảng mã hỗ trợ
-
-- **Unicode** (mặc định) - Hỗ trợ đầy đủ các ký tự tiếng Việt
-- **TCVN3 (ABC)** - Bảng mã cũ cho tương thích
-- **VNI Windows** - Bảng mã VNI trên Windows
-- **Unicode Composite** - Unicode tổ hợp
-- **Vietnamese Locale (CP1258)** - Bảng mã Windows 1258
-
-### ⚡ Tính năng nâng cao
-
-- Smart Switch Key, Excluded Apps, Macro/gõ tắt
-- Thống kê sử dụng, nhiều kiểu gõ và bảng mã
-- Chạy hoàn toàn offline, không gửi dữ liệu ra ngoài
-
-### ✅ Sau khi cài đặt nên kiểm tra
-
-- Bật quyền **Accessibility** cho PHTV
-- Thử chuyển nhanh Telex/VNI, macro, Excluded Apps
-- Mở Settings để bật khởi động cùng macOS nếu cần
+GPL v3 - Xem [LICENSE](LICENSE)
 
 ## ⚙️ Yêu cầu hệ thống
 
@@ -265,6 +204,7 @@ Xem [FAQ.md](FAQ.md) để có câu trả lời chi tiết hơn.
 ## � Lịch sử cập nhật gần đây
 
 ### v1.1.0 (2025-12-16)
+
 - ✅ **Khắc phục Spotlight**: Gõ tiếng Việt trong Spotlight Search giờ hoạt động bình thường
 - 🔤 **Sửa lỗi garbling**: "Phaạm Huùng Tieiến" → "Phạm Hùng Tiến"
 - 🎯 **Accessibility API integration**: AX text replacement + per-character Unicode posting
@@ -272,6 +212,7 @@ Xem [FAQ.md](FAQ.md) để có câu trả lời chi tiết hơn.
 - 🔍 **Debug logging**: Opt-in via `PHTV_SPOTLIGHT_DEBUG=1` env var
 
 ### v1.0.3 (trước đó)
+
 - Cấu hình cơ bản, Macro, Excluded Apps, Smart Switch Key
 - macOS integration tốt, giao diện SwiftUI
 
