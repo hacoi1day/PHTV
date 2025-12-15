@@ -21,9 +21,25 @@
 
 ---
 
+## 🎉 Mới trong v1.1.0 - Spotlight Fix
+
+> ✅ **Spotlight hoạt động bình thường!** Bạn giờ có thể gõ tiếng Việt trực tiếp trong Spotlight Search mà không bị garbling/lỗi.
+
+**Lỗi đã được khắc phục:**
+- ❌ Trước: "Phạm Hùng Tiến" → "Phaạm Huùng Tieiến" *(garbled)*
+- ✅ Giờ: "Phạm Hùng Tiến" → **"Phạm Hùng Tiến"** *(hoàn hảo!)*
+
+**Cách thực hiện:**
+- Sử dụng Accessibility API (AX text replacement) thay vì synthetic events phức tạp
+- Defer backspaces và áp dụng deterministically trong SendNewCharString()
+- Per-character Unicode posting để tránh mark reordering
+- HID tap posting + non-coalesced flags + delays cho timing-sensitive Spotlight field
+
+---
+
 ## ⚡ Bắt đầu nhanh (3 bước)
 
-1. Tải `PHTV.dmg` hoặc `PHTV.zip` từ [phamhungtien.com/PHTV](https://phamhungtien.com/PHTV/) hoặc [Releases](../../releases/latest)
+1. Tải `PHTV.dmg` hoặc `PHTV.zip` từ [phamhungtien.com/PHTV](https://phamhungtien.com/PHTV/) hoặc [Releases](../../releases/latest) **(v1.1.0 hoặc mới hơn)**
 2. Kéo `PHTV.app` vào `Applications`
 3. Mở app và cấp **Accessibility** khi được nhắc
 
@@ -51,6 +67,7 @@
 - 🌙 **Dark Mode** - Tự động thích ứng với chế độ giao diện hệ thống
 - 🔧 **Hoàn toàn có thể tùy chỉnh** - Linh hoạt với nhiều tùy chọn cấu hình
 - 🔒 **Quyền riêng tư** - Không thu thập hay gửi dữ liệu gõ ra ngoài
+- 🔍 **Spotlight Search** - *(v1.1.0+)* Gõ tiếng Việt trực tiếp trong Spotlight mà không bị lỗi
 
 ## 🌟 Tính năng chính
 
@@ -245,7 +262,20 @@ Nếu bạn phát hiện lỗi, vui lòng:
 
 Xem [FAQ.md](FAQ.md) để có câu trả lời chi tiết hơn.
 
-## 🚀 Tính năng sắp tới
+## � Lịch sử cập nhật gần đây
+
+### v1.1.0 (2025-12-16)
+- ✅ **Khắc phục Spotlight**: Gõ tiếng Việt trong Spotlight Search giờ hoạt động bình thường
+- 🔤 **Sửa lỗi garbling**: "Phaạm Huùng Tieiến" → "Phạm Hùng Tiến"
+- 🎯 **Accessibility API integration**: AX text replacement + per-character Unicode posting
+- 🐛 **HID tap posting + non-coalesced flags + delays** cho Spotlight field sensitivity
+- 🔍 **Debug logging**: Opt-in via `PHTV_SPOTLIGHT_DEBUG=1` env var
+
+### v1.0.3 (trước đó)
+- Cấu hình cơ bản, Macro, Excluded Apps, Smart Switch Key
+- macOS integration tốt, giao diện SwiftUI
+
+## �🚀 Tính năng sắp tới
 
 - [ ] Hỗ trợ input method plugin cho các ứng dụng web
 - [ ] Đồng bộ hóa cài đặt qua iCloud
