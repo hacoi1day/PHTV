@@ -1,53 +1,38 @@
-# Chính sách bảo mật (Security Policy)
+# Chính sách bảo mật
 
 ## Báo cáo lỗi bảo mật
 
-Nếu bạn phát hiện lỗi bảo mật trong PHTV, **vui lòng không** mở public issue.
+**Không mở public issue** cho lỗ hổng bảo mật.
 
-Thay vào đó, vui lòng gửi báo cáo cho người duy trì bằng cách:
+### Liên hệ
 
-### Email
+Gửi email chi tiết lỗ hổng đến: **hungtien10a7@gmail.com**
 
-Gửi email đến: [Contact the maintainer on GitHub](https://github.com/PhamHungTien/PHTV/issues) hoặc liên hệ trực tiếp thông qua GitHub Issues (với "SECURITY" prefix)
-
-**Bao gồm trong báo cáo của bạn:**
-
-- Mô tả chi tiết về lỗ hổng
-- Các bước để tái hiện vấn đề
-- Tác động tiềm ẩn của lỗ hổng
-- Phiên bản PHTV bị ảnh hưởng
-- Phiên bản macOS và Xcode (nếu liên quan)
+Bao gồm:
+- Mô tả lỗ hổng
+- Cách tái hiện
+- Tác động tiềm ẩn
+- PHTV & macOS version
 
 ### Timeline
 
-1. **Ngay khi nhận được:** Chúng tôi sẽ xác nhận nhận được báo cáo
-2. **Trong 48 giờ:** Chúng tôi sẽ đánh giá mức độ nghiêm trọng
-3. **Trong 7 ngày:** Chúng tôi sẽ bắt đầu làm việc trên bản vá
-4. **Trước khi release bản vá:** Chúng tôi sẽ liên hệ với bạn
-5. **Khi release:** Chúng tôi sẽ công khai công bố lỗ hổng và bản vá
+- **Ngay khi nhận:** Xác nhận báo cáo
+- **Trong 48 giờ:** Đánh giá mức độ nghiêm trọng
+- **Trong 7 ngày:** Bắt đầu làm việc trên bản vá
+- **Trước release vá:** Liên hệ với bạn
+- **Sau release:** Công bố lỗ hổng và bản vá
 
-### Chính sách tiết lộ có trách nhiệm
+### Tiết lộ có trách nhiệm
 
-Chúng tôi tin vào tiết lộ có trách nhiệm. Điều này có nghĩa:
-
-- **Cho người báo cáo:** Vui lòng cung cấp cho chúng tôi thời gian hợp lý để bản vá trước khi tiết lộ công khai
-- **Cho chúng tôi:** Chúng tôi sẽ làm việc nhanh chóng để bản vá và thông báo cho người dùng
+- **Cho bạn:** Vui lòng cho chúng tôi thời gian bản vá trước khi công bố
+- **Cho chúng tôi:** Chúng tôi sẽ bản vá và thông báo người dùng nhanh chóng
 
 ## Hỗ trợ phiên bản
 
-PHTV cam kết cung cấp bản vá bảo mật cho:
-
-| Phiên bản | Hỗ trợ                   |
-| --------- | ------------------------ |
-| 1.x.x     | ✅ Hoạt động             |
-| 0.x.x     | ⚠️ Bản vá quan trọng chỉ |
-
-## Các loại lỗ hổng bảo mật
-
-### Lỗ hổng quan trọng
-
-- Truy cập trái phép vào dữ liệu người dùng
-- Tính năng bảo mật bị vô hiệu hóa
+| Phiên bản | Hỗ trợ |
+| --------- | ------ |
+| 1.x       | ✅ Đầy đủ |
+| 0.x       | ⚠️ Quan trọng chỉ |
 - Remote code execution
 - Tấn công elevation of privilege
 

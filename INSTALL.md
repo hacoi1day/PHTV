@@ -1,47 +1,23 @@
-# PHTV Installation Guide
+# Hướng dẫn cài đặt PHTV
 
----
+## 🚀 Tải xuống nhanh
 
-## 🌟 Tải xuống nhanh
+**[👉 Tải PHTV từ phamhungtien.com/PHTV](https://phamhungtien.com/PHTV/)**
 
-<div align="center">
+## 📥 Cách cài đặt
 
-### 👉 **[Tải PHTV từ phamhungtien.com](https://phamhungtien.com/)**
+### Option 1: Từ Website (Khuyến khích)
 
-**Hướng dẫn chi tiết, hình ảnh từng bước, và video hướng dẫn**
+1. Tải từ [phamhungtien.com/PHTV](https://phamhungtien.com/PHTV/)
+2. Drag `PHTV.app` vào `Applications`
+3. Khởi động từ Launchpad hoặc Spotlight
 
-[Website](https://phamhungtien.com/) | [Hướng dẫn chi tiết](https://phamhungtien.com/#setup) | [GitHub](https://github.com/PhamHungTien/PHTV)
-
-</div>
-
----
-
-## 🚀 Cách cài đặt PHTV
-
-### ⭐ Option 1: Download từ Website (Khuyến khích)
-
-**[👉 Tải trực tiếp tại phamhungtien.com](https://phamhungtien.com/)**
-
-Hoặc từ GitHub Releases:
+### Option 2: Từ GitHub Releases
 
 1. Vào [GitHub Releases](https://github.com/PhamHungTien/PHTV/releases)
-2. Download file `PHTV_1.0.0.dmg`
+2. Download `PHTV.dmg`
 3. Double-click để mở DMG
-4. Drag `PHTV.app` vào folder `Applications`
-5. Khởi động từ Launchpad hoặc Spotlight (Cmd + Space)
-
-### Option 2: Homebrew Cask (Coming soon)
-
-```bash
-brew tap phamhungtien/phtv https://github.com/PhamHungTien/PHTV.git
-brew install --cask phtv
-```
-
-Hoặc khi được thêm vào chính thức Homebrew Casks:
-
-```bash
-brew install --cask phtv
-```
+4. Drag `PHTV.app` vào `Applications`
 
 ### Option 3: Từ Source Code
 
@@ -56,47 +32,24 @@ xcodebuild -scheme PHTV -configuration Release -arch arm64 -arch x86_64
 # App sẽ được build tại: build/Release/PHTV.app
 ```
 
----
-
 ## ⚙️ Yêu cầu hệ thống
 
-- **macOS**: 12.0 hoặc cao hơn
+- **macOS**: 14.0 hoặc cao hơn (Sonoma+)
 - **Bộ xử lý**: Apple Silicon (M1/M2/M3) hoặc Intel
 - **Dung lượng**: ~50 MB
 
----
+## 🔧 Các bước sau khi cài
 
-## 🔧 Cách sử dụng
+1. **Cấp quyền Accessibility** - App sẽ yêu cầu lần đầu
+2. **Chọn phương pháp gõ** - Settings → Telex hoặc VNI
+3. **Tùy chỉnh phím chuyển** - Settings → Keyboard Shortcuts (optional)
+4. **Thêm Macros** - Settings → Macros (optional)
 
-### Bật/Tắt tiếng Việt
+## 📖 Tài liệu
 
-- Nhấn phím tắt mặc định: `Cmd + Space` (hoặc tùy chỉnh)
-- Hoặc click vào Status Bar icon → chọn ngôn ngữ
-
-### Thay đổi phương pháp gõ
-
-1. Click Status Bar icon → Settings
-2. Chọn Input Method: Telex, VNI, Simple Telex 1/2
-3. Chọn Character Set: Unicode, TCVN3, VNI Windows, v.v.
-
-### Quản lý Macros (Gõ tắt)
-
-1. Mở Settings → Macros
-2. Nhấn "+" để thêm macro mới
-3. Nhập từ viết tắt và nội dung
-
-### Loại trừ ứng dụng
-
-1. Settings → Excluded Apps
-2. Nhấn "+" và chọn ứng dụng muốn tắt tiếng Việt
-
----
-
-## 📚 Tài nguyên hỗ trợ
-
-- **Website**: [phamhungtien.com](https://phamhungtien.com/) - Hướng dẫn chi tiết với hình ảnh, video, và các tính năng
-- **GitHub**: [github.com/PhamHungTien/PHTV](https://github.com/PhamHungTien/PHTV)
-- **Liên hệ**: [hungtien10a7@gmail.com](mailto:hungtien10a7@gmail.com)
+- [Hướng dẫn chi tiết](https://phamhungtien.com/PHTV/#setup) - Hình ảnh và video
+- [Các tính năng](https://phamhungtien.com/PHTV/#features)
+- [Liên hệ hỗ trợ](https://phamhungtien.com/PHTV/#feedback)
 
 ---
 

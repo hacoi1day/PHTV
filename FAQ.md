@@ -99,97 +99,54 @@ Hoặc trong Settings → Reset All (nếu có button này).
 
 ## Bảo mật & Quyền riêng tư
 
-### Q13: PHTV có gửi dữ liệu gì lên internet không?
+### Q13: PHTV có gửi dữ liệu lên Internet không?
 
-**A:** Không! PHTV hoàn toàn **offline**:
+**A:** Không! Hoàn toàn offline, không kết nối mạng, không thu thập dữ liệu.
 
-- Không có kết nối mạng
-- Không thu thập dữ liệu người dùng
-- Mã nguồn công khai trên GitHub
+### Q14: Dữ liệu được lưu ở đâu?
 
-### Q14: Dữ liệu cài đặt được lưu ở đâu?
+**A:** Chỉ nằm trên máy của bạn:
+- Settings: `~/Library/Preferences/com.phtv.app.plist`
+- Macros: `~/Library/Application Support/PHTV/`
 
-**A:**
+### Q15: Tại sao PHTV cần quyền Accessibility?
 
-- **Local**: `~/Library/Preferences/com.phtv.app.plist`
-- **Macros**: `~/Library/Application Support/PHTV/`
-- Chỉ nằm trên máy của bạn
+**A:** Để giám sát phím gõ, chuyển ngôn ngữ, hoạt động trên mọi ứng dụng. Yêu cầu chuẩn của macOS.
 
-### Q15: Tại sao PHTV cần quyền "Accessibility"?
+## Khắc phục sự cố
 
-**A:** Cần quyền này để:
-
-- Giám sát các phím bạn gõ
-- Chuyển ngôn ngữ tự động
-- Hoạt động trên mọi ứng dụng
-
-Đây là yêu cầu chuẩn của macOS cho Input Methods.
-
----
-
-## Vấn đề & Khắc phục
-
-### Q16: PHTV bị crash/không phản hồi?
+### Q16: PHTV không hoạt động?
 
 **A:**
 
-1. Restart ứng dụng bị lỗi
-2. Tắt PHTV và bật lại: `Cmd + Space`
-3. Nếu vẫn lỗi, gửi issue tới GitHub
+1. Kiểm tra quyền Accessibility
+2. Tắt/bật lại PHTV
+3. Restart ứng dụng gặp lỗi
+4. Tạo issue trên GitHub
 
-### Q17: Phím tắt chuyển ngôn ngữ không hoạt động?
+### Q17: Phím tắt không hoạt động?
 
-**A:**
+**A:** 
 
 1. Kiểm tra Settings → Keyboard Shortcuts
 2. Kiểm tra System Preferences → Keyboard → Shortcuts
-3. Tìm xung đột phím tắt với ứng dụng khác
+3. Tìm xung đột với ứng dụng khác
 
-### Q18: PHTV không xuất hiện trong Status Bar?
+### Q18: Tiếng Việt gõ ra sai?
 
-**A:**
-
-1. Kiểm tra System Preferences → Security & Privacy → Accessibility
-2. Thêm PHTV vào danh sách
-3. Restart PHTV
-
-### Q19: Tiếng Việt gõ ra không đúng?
-
-**A:**
-
-- Kiểm tra Input Method được chọn (Telex/VNI/v.v.)
-- Kiểm tra Character Set (Unicode/TCVN3/v.v.)
-- Nếu dùng ứng dụng cũ, thử đổi Character Set
-
----
+**A:** Kiểm tra Input Method (Telex/VNI) và Character Set (Unicode/TCVN3).
 
 ## Phát triển
 
-### Q20: Làm sao để đóng góp vào dự án?
+### Q19: Làm sao để đóng góp?
 
-**A:** Xem [CONTRIBUTING.md](CONTRIBUTING.md)
+**A:** Xem [CONTRIBUTING.md](CONTRIBUTING.md) - Fork, tạo branch, commit, PR.
 
-1. Fork repository
-2. Tạo branch cho feature/fix
-3. Commit changes với message rõ ràng
-4. Tạo Pull Request
+### Q20: Engine gõ là gì?
 
-### Q21: PHTV sử dụng động cơ gõ nào?
+**A:** Dựa trên [OpenKey](https://github.com/tuyenvm/OpenKey) - dự án mã nguồn mở tiếng Việt.
 
-**A:** PHTV dựa trên engine từ [OpenKey](https://github.com/tuyenvm/OpenKey) - một dự án mã nguồn mở tiếng Việt lâu năm.
+## Liên hệ
 
-### Q22: Có thể sử dụng PHTV trên iOS/iPad không?
-
-**A:** Hiện tại chỉ dành cho macOS. iOS Input Methods có hạn chế từ Apple, cần khảo sát kỹ.
-
----
-
-## Liên hệ & Hỗ trợ
-
-- **GitHub Issues**: [Report bugs](https://github.com/PhamHungTien/PHTV/issues)
-- **Discussions**: [Thảo luận](https://github.com/PhamHungTien/PHTV/discussions)
-- **Email**: Có thể thêm sau
-
----
-
-**Cập nhật lần cuối**: 2025-12-15
+- **Issues**: [GitHub](https://github.com/PhamHungTien/PHTV/issues)
+- **Email**: hungtien10a7@gmail.com
