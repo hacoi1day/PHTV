@@ -40,7 +40,7 @@ GPL v3 - Xem [LICENSE](LICENSE)
 
 - **macOS 14.0 trở lên** (Sonoma và các phiên bản mới hơn)
 - **Quyền Accessibility** (sẽ được yêu cầu khi khởi động lần đầu)
-- **Xcode 16.0+** (nếu build từ source)
+- **Xcode 26.0+** (nếu build từ source)
 
 ### Ma trận hỗ trợ
 
@@ -235,7 +235,8 @@ Xem [FAQ.md](FAQ.md) để có câu trả lời chi tiết hơn.
 ## 📞 Liên hệ & Hỗ trợ
 
 - **Issues**: [GitHub Issues](../../issues) - Báo cáo lỗi, yêu cầu tính năng
-- **Email**: phamhungtien@maclife.io
+- **Email**: hungtien10a7@gmail.com
+- **LinkedIn**: https://www.linkedin.com/in/ph%E1%BA%A1m-h%C3%B9ng-ti%E1%BA%BFn-a1b405327/
 - **Website**: [phamhungtien.com/PHTV](https://phamhungtien.com/PHTV/)
 
 ---
